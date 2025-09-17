@@ -1,28 +1,20 @@
 package com.zarrar.i221203
 
 import android.os.Bundle
-import android.widget.ImageView
-import android.content.Intent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class HomePageActivity : AppCompatActivity() {
+class SearchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        val ivSearchBtn = findViewById<ImageView>(R.id.ivSearchBtn)
-        setContentView(R.layout.activity_home_page)
-        ivSearchBtn.setOnClickListener {
-            val intent = Intent(this, SearchActivity::class.java)
-            startActivity(intent)
-        }
+        setContentView(R.layout.activity_search)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
     }
-
 }
