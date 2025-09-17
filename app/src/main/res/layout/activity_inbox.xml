@@ -1,0 +1,276 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".HomePageActivity">
+
+    <!-- 1. Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/ivMessageBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/leftarrow"
+            app:tint="#D3A0A0" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="jacob_w"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#D3A0A0" />
+
+        <ImageView
+            android:id="@+id/ivMessages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/plus"
+            app:tint="#D3A0A0" /> <!-- Placeholder -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/search_bar_background"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/searchbtn"
+            app:tint="#D3A0A0" />
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:textColorHint="#D3A0A0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search"
+            android:textColor="#D3A0A0"
+            android:background="@android:color/transparent"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:background="?android:attr/selectableItemBackground"> <!-- For ripple effect on click -->
+
+        <ImageView
+            android:id="@+id/ivUserProfile"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/profile" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="joshua_l"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvMessagePreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Have a nice day, bro!"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="now"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:layout_marginEnd="8dp"/>
+
+        <ImageView
+            android:id="@+id/ivCameraIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/camera"
+            app:tint="#A0A0A0" /> <!-- Adjust tint as needed -->
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:background="?android:attr/selectableItemBackground"> <!-- For ripple effect on click -->
+
+        <ImageView
+            android:id="@+id/ivUserProfile2"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/profile" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/tvUsername2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hasnain"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvMessagePreview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You got full Marks, congrats!"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTimestamp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="now"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:layout_marginEnd="8dp"/>
+
+        <ImageView
+            android:id="@+id/ivCameraIcon2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/camera"
+            app:tint="#A0A0A0" /> <!-- Adjust tint as needed -->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:background="?android:attr/selectableItemBackground"> <!-- For ripple effect on click -->
+
+        <ImageView
+            android:id="@+id/ivUserProfile3"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/profile" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/tvUsername3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zarrar"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvMessagePreview3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I have done my assignment"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTimestamp3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2h"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:layout_marginEnd="8dp"/>
+
+        <ImageView
+            android:id="@+id/ivCameraIcon3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/camera"
+            app:tint="#A0A0A0" /> <!-- Adjust tint as needed -->
+
+
+    </LinearLayout>
+</LinearLayout>

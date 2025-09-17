@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.I221203">
         <activity
+            android:name=".InboxActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchBarActivity"
+            android:exported="false" />
+        <activity
             android:name=".SearchActivity"
             android:exported="false" />
         <activity

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".SearchBarActivity">
+
+    <!-- Search Input Area (Keep this as it is) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+        <!-- ... your existing search bar EditText and Icons ... -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/search_bar_background"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/searchbtn"
+                app:tint="#D3A0A0" />
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:textColorHint="#D3A0A0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Search"
+                android:textColor="#D3A0A0"
+                android:background="@android:color/transparent"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:layout_marginStart="8dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:text="Cancel"
+            android:textColor="#D3A0A0"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- NEW: Row of TextViews for Categories -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#FAFAFA"> <!-- Optional background color -->
+
+        <TextView
+            android:id="@+id/tvFilterTop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Top"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textStyle="bold"/> <!-- Example: Make "Top" initially appear selected -->
+
+        <TextView
+            android:id="@+id/tvFilterAccounts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Accounts"
+            android:textSize="16sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/tvFilterTags"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tags"
+            android:textSize="16sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/tvFilterPlaces"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Places"
+            android:textSize="16sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DADADA"/>
+
+
+    <!-- Results Area - ScrollView with included items (Keep this as it is) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!-- ... your existing LinearLayout container for search results ... -->
+        <LinearLayout
+            android:id="@+id/search_results_container_basic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Manually include items to look like the screenshot -->
+            <include layout="@layout/item_search_result_account"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0"/>
+            <include layout="@layout/item_search_result_hashtag"/>
+            <include layout="@layout/item_search_result_hashtag"/>
+            <include layout="@layout/item_search_result_hashtag"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
