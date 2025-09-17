@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="#F5F5F5">
+
+    <!-- Post Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp">
+        <ImageView
+            android:id="@+id/ivPostUserAvatar_basic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@android:drawable/sym_def_app_icon"/> <!-- Placeholder -->
+        <TextView
+            android:id="@+id/tvPostUsername_basic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Post Image -->
+    <ImageView
+        android:id="@+id/ivPostImage_basic"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_report_image" /> <!-- Placeholder icon -->
+
+    <!-- Post Caption -->
+    <TextView
+        android:id="@+id/tvCaption_basic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is a basic post caption."
+        android:paddingTop="5dp"/>
+
+</LinearLayout>

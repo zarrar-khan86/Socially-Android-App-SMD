@@ -34,8 +34,7 @@ class SignUpActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_sign_up)
 
-        // Apply system bar insets to the actual root view
-       //what is root view here?
+
         val root = findViewById<android.view.View>(R.id.main)
         ViewCompat.setOnApplyWindowInsetsListener(root) { v, insets ->
             val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

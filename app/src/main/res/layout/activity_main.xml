@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@color/white"
     tools:context=".MainActivity"
 
     >
@@ -27,6 +27,7 @@
         android:textSize="20dp"
         android:layout_centerHorizontal="true"
         android:layout_above="@id/SMDText"
+        android:textColor="@color/black"
         android:layout_marginBottom="8dp" />
 
     <TextView
@@ -36,6 +37,7 @@
         android:text="SMD"
         android:textColor="#DB0909"
         android:textSize="40dp"
+        android:textStyle="bold"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp" />
